@@ -3,7 +3,7 @@ import "../scss/style.scss";
 import Header from "../components/header/Header";
 import Main from "../components/main/Main";
 import instagram from "../images/ig.svg";
-import ModelViewer from "../components/macbook/modelviewer";
+import ModelViewer from "../components/modelviewer/modelviewer";
 
 // markup
 const IndexPage = () => {
