@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Quicksand", sans-serif;
+  padding: 2rem;
+  background: linear-gradient(45deg, #13041b, #292447, #28425a, #235d6a);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease-in-out infinite;
+  height: 100vh;
+  color: #fff;
+
+  @media screen and (min-width: 720px) {
+    padding: 3.5rem;
+  }
+}
+
+p {
+  margin-block-end: 1rem;
+  font-size: 0.85rem;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  transition: background 1s ease;
+  border-radius: 6px;
+
+  &:hover,
+  &:focus {
+    background: rgba(#1d0b25, 0.5);
+    transition: background 0.5s ease;
+    text-decoration: underline;
+  }
+
+  &-modal:hover,
+  &-modal:focus {
+    background: rgba(#28425a, 0.5);
+  }
+}
+
+.hrefLink,
+p a {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #83b9b6;
+    text-decoration: none;
+    background-color: #c0e4e1;
+    color: #0f0d20;
+  }
+}
+
+.weatherIcon {
+  display: inline-block;
+  width: 2ch;
+  height: auto;
+}
+
+footer {
+  padding: 0 0 1.25rem;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 10%;
+    border-top: 1px solid #fff;
+    padding: 1.25rem 0 0;
+  }
+}
+
+.linkedInIcon,
+.igIcon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  filter: invert(100%);
+}
+
+.ReactModal__Content {
+  margin: auto;
+
+  @media screen and (min-width: 720px) {
+    max-width: 80%;
+  }
+}
+
+#skills h2 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#weather-code {
+  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  right: 0;
+  bottom: 0;
+
+  @media screen and (min-width: 400px) {
+    display: block;
+  }
+}
+
+.code-- {
+  &1180,
+  &1183,
+  &1186,
+  &1189,
+  &1192,
+  &1195 {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+// model viewer
+
+.model-viewer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 50vw;
+  height: calc(100vh - 100px);
+  // pointer-events: none;
+
+  div {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: all 1s ease-in-out;
+  }
+}
